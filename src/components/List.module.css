@@ -1,47 +1,138 @@
-.navBar {
+
+ .logoContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
-  padding: 1rem;
+  flex: 1;
+  width: 100%;
+  padding: 1rem 0;
+} 
+
+.logo {
+  max-width: 150px;
+  height: 150px;
+  display: block;
 }
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.searchInputs {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem; /* 로고와 검색 입력 필드 사이 간격 */
+  width: 50%;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 30px;
+  border : 1px solid rgb(97, 96, 96);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 */
+  background-color: #f2f2f2; /* 배경색 */
+}
+
+.searchInput {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  flex: 1;
+  border : 1px solid rgb(255, 255, 255);
+  background-color: #f2f2f2; /* 배경색 */
+}
+
+.searchListBox{
+  background-color: #007bff;
+}
+
+.userInfomation {
+  display: flex;          /* Flexbox로 정렬 */
+  align-items: center;    /* 수직 정렬 */
+}
+
+.userInfomation img {
+  cursor: pointer;        /* 커서를 포인터로 변경 */
+  margin-left: 10px;      /* 이미지와 텍스트 사이 간격 조절 */
+}
+
+.userInfomation img:hover {
+  transform: scale(1.1);  /* 이미지에 마우스 오버 시 약간 확대 (선택 사항) */
+  transition: transform 0.2s; /* 애니메이션 효과 (선택 사항) */
+}
+
+
+
+
+.navBar {
+  width: 100vw; /* 화면 가로 길이만큼 너비를 설정합니다. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  /* padding: 1rem; 이거 없애니 여백 공간 사라짐*/   
+  }
+
+.slideshow {
+    display: flex;
+    justify-content: center; /* 가로 방향으로 가운데 정렬 */
+    align-items: center; /* 세로 방향으로 가운데 정렬 */
+    width: 100%;
+    height: 300px;
+    overflow: hidden; /* 이미지를 컨테이너 크기에 맞추기 위해 오버플로우 숨김 */
+    background-color: #000; /* 선택 사항: 컨테이너 배경색 설정 */
+}
+  
+.slideshow_image {
+    max-width: 100%; /* 이미지의 최대 너비를 컨테이너 너비에 맞춤 */
+    max-height: 100%; /* 이미지의 최대 높이를 컨테이너 높이에 맞춤 */
+    object-fit: cover; /* 이미지의 비율을 유지하며 컨테이너 크기에 맞춤 */
+}
+  
 
 .navList {
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
-}
+  }
 
 .navItem {
   margin-right: 1rem;
-}
-
+  }
+  
 .navLink {
   text-decoration: none;
   color: #333;
   font-weight: bold;
   padding: 0.5rem;
   transition: color 0.3s ease;
-}
-
+  }
+.navtoggle{
+    text-align: left;
+  }
+  
 .navLink:hover {
   color: #007bff;
-}
-
+  }
+  
 @media (max-width: 768px) {
-  .navBar {
-      flex-direction: column;
-      align-items: flex-start;
+.navBar {
+  width: 100%; /* 모바일 화면에서는 가로 스크롤이 생기지 않도록 100%로 변경합니다. */
+  flex-direction: column;
+  align-items: flex-start;
   }
-
-  .navList {
-      flex-direction: column;
-      margin-top: 1rem;
+  
+.navList {
+  flex-direction: column;
+  margin-top: 1rem;
   }
-
-  .navItem {
-      margin-right: 0;
-      margin-bottom: 0.5rem;
+  
+.navItem {
+  margin-right: 0;
+  margin-bottom: 0.5rem;
   }
-}
+  }
